@@ -1,38 +1,13 @@
 @echo off
 set "LOCAL_VERSION=1.9.0b"
 
-set "BIN=%~dp0bin\"
-if not exist "%BIN%winwsb.exe" (
-    call :PrintRed "[ERR] Missing file: %BIN%winwsb.exe"
-    call :PrintYellow "Put winwsb.exe into the bin\ folder next to this .bat, or use 'Check Updates' to reinstall."
-    pause
-    goto menu
-)
+start "WinWSB" cmd /c ""%~dp0bin\winwsb.exe""
 
 :: External commands
 if "%~1"=="status_zapret" (
     set "BIN=%~dp0bin\"
     call :test_service zapret soft
     call :tcp_enable
-
-    pushd "%BIN%" 2>nul || (
-        call :PrintRed "[ERR] Could not cd to '%BIN%'"
-        call :PrintYellow "Make sure the bin\ folder exists next to this .bat"
-        pause
-        goto menu
-    )
-
-    if not exist "winwsb.exe" (
-        call :PrintRed "[ERR] Missing: %CD%\winwsb.exe"
-        call :PrintYellow "Place winwsb.exe into the bin\ folder next to this .bat."
-        popd
-        pause
-        goto menu
-    )
-    start "" /b ".\winwsb.exe"
-    popd
-    pause
-    goto menu
 )
 
 
