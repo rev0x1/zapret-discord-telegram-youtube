@@ -30,7 +30,7 @@
 1. Включите Secure DNS. В Chrome - "Использовать безопасный DNS", и выбрать поставщика услуг DNS (выбрать вариант, отличный от поставщика по умолчанию). В Firefox - "Включить DNS через HTTPS, используя: Максимальную защиту"
     * В **Windows 11** поддерживается включение Secure DNS прямо в настройках - [инструкция тут](https://www.howtogeek.com/765940/how-to-enable-dns-over-https-on-windows-11/). Рекомендуется, если вы пользуетесь Windows 11
 
-2. Загрузите архив (zip/rar) со [страницы последнего релиза](https://github.com/Flowseal/zapret-discord-youtube/releases/latest)
+2. Загрузите архив (zip/rar) со [страницы последнего релиза](https://github.com/rev0x1/zapret-discord-telegram-youtube/releases/latest)
 
 3. Распакуйте содержимое архива по пути, который не содержит кириллицу/спец. символы
 
@@ -92,7 +92,7 @@
 - `service.bat` -> `Remove Services`
 - `service.bat` -> `Run Diagnostics` (если есть ошибки - устраните их) -> в конце Y
 - Удалите папку с запретом
-- Скачайте последнюю версию [со страницы релизов](https://github.com/Flowseal/zapret-discord-youtube/releases) (`zapret-discord-youtube-...`)
+- Скачайте последнюю версию [со страницы релизов](https://github.com/rev0x1/zapret-discord-telegram-youtube/releases) (`zapret-discord-youtube-...`)
 - Распакуйте в новую папку в корне диска (без спец. символов и пробелов)
 - Далее пробуйте запускать различные `general` скрипты (стратегии). Проверьте доступность интернет ресурсов - если не работают, то закрывайте программу (в панели задач иконка замочка) и пробуйте другую стратегию
 - Как найдёте рабочую стратегию, можете поставить её на автозапуск: `service.bat` -> `Install Service` -> выбираете нужную
